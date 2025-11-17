@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Shop{
+    int id[100];
+    int price[100];
+public:
+    void setprice(int i);
+    void display(int c);
+};
+
+void Shop :: setprice(int i){
+    cout << "Enter the id of item no " << i+1 << endl;
+    cin >> id[i];
+    cout << "Enter the price of the item no " << i+1 << endl;
+    cin >> price[i];
+}
+
+void Shop :: display(int c){
+    for(int i = 0; i < c; i++){
+        cout << "Price of item with id " << id[i] << " is " << price[i] << endl;
+    }
+}
+
+int main()  // Added 'int' return type
+{
+    int num;
+    cout << "Enter the number of items you want to enter:" << endl;
+    cin >> num;
+    
+    Shop khan;
+    
+    // Input all items
+    for(int i = 0; i < num; i++){
+        khan.setprice(i);
+    }
+    
+    // Display all items ONCE
+    khan.display(num);  // ✅ Call display ONCE with the total count
+    
+    return 0;  // Added return statement
+}
