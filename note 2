@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class binary{
+string b;
+public:
+void binaryinp(void);
+void isbinary(void);
+};
+void binary :: binaryinp(void){
+    cout<<"Enter a binary number: "<<endl;
+    cin>>b;
+}
+void binary :: isbinary(void){
+    for(int i=0; i<b.length();i++){
+       if(b[i] != '0' && b[i] != '1')
+       {
+         cout<<"number is not binary";
+         return;
+        }
+    }
+    cout<<"Number is binary"<<endl;
+}
+main(){
+    binary number;
+    number.binaryinp();
+    number.isbinary();
+
+}
