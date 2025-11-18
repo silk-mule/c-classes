@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class mark
+{
+    int id;
+    static int count;
+
+public:
+    void setdata()
+    {
+        cout << "Enter the id of employee: " << endl;
+        cin >> id;
+        count++;
+    }
+    void getdata()
+    {
+        cout << "The id of this employee is: " << id << " the batch number is  " << count;
+    }
+};
+int mark ::count;
+main()
+{
+    mark shah;
+    shah.setdata();
+    shah.getdata();
+}
