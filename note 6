@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class mcomplex{
+int a,b;
+public:
+void plus(int s,int d){
+    a = s;
+    b = d;
+}
+void sumplus(mcomplex val1,mcomplex val2){
+    a = val1.a + val2.a;
+    b = val1.b + val2.b;
+}
+void display(){
+    cout<<"Your  complex number is: "<<a<<" "<<b<<endl;
+}
+};
+main()
+{
+   mcomplex fir,seco,result;
+   fir.plus(1,2);
+   fir.display();
+
+   seco.plus(1,2);
+   seco.display();
+
+  result.sumplus(fir,seco);
+  result.display();
+}
