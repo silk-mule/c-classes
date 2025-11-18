@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class com{
+    int a,b;
+public:
+      void equal(int fir,int sec){
+        a = fir;
+        b = sec;
+      }
+      void print(){
+        cout<<"Your complex number is "<<a<<" + "<<b<<"i"<<endl;
+      }
+      friend com comsum(com val1,com val2);
+};
+com comsum(com val1,com val2){
+    com result;
+     result.a = val1.a + val2.a;
+     result.b = val1.b + val2.b;
+     return result;
+}
+main(){
+com c1,c2,c3;
+c1.equal(5,10);
+c1.print();
+
+c2.equal(10,10);
+c2.print();
+
+c3 = comsum(c1,c2);
+c3.print();
+
+}
