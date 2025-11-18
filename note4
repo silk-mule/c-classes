@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+class mark{
+
+   public:
+       int math,comp; 
+    mark(int a,int b) : math(a) , comp(b){}
+    void print(){
+        cout<<"Marks of math is :"<<math<<endl;
+                cout<<"Marks of computer is :"<<comp<<endl;
+    }
+};
+main(){
+      mark st1(10,10);
+      st1.print();
+}
