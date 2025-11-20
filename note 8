@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class cal;
+
+class final{
+public:
+
+ void complex(cal &o1,cal &o2,cal &res);
+};
+
+
+class cal{
+  int a,b;
+ public:
+    void get(int val1,int val2)
+    {
+      a=val1;
+      b=val2;
+    }
+   friend void final ::  complex(cal &o1 , cal &o2,cal &res);
+    void display(){
+      cout<<"Your complex number is: "<<a<<" + "<<b<<"i"<<endl;
+    }
+};
+
+ void final :: complex(cal &o1,cal &o2,cal &res){
+      res.a = o1.a + o2.a;
+      res.b = o1.b + o2.b;
+    }
+
+
+
+int main(){
+  cal c1,c2,res;
+  c1.get(9,4);
+  c1.display();
+
+  c2.get(1,6);
+  c2.display();
+
+  final f;
+ f.complex(c1,c2,res);
+res.display();
+  return 0;
+}
