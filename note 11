@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class constuct{
+  int a , b , c;
+  public:
+  //default constructor
+   constuct() : a(0) , b(45) {}
+
+   //parametrized constructor
+   constuct(int val1,int val2){
+    a = val1;
+    b = val2;
+   }
+   constuct(int val3, int val4,int val5) : a(val3) , b(val4) , c(val5) {}
+
+   void display(){
+    cout<<"Your values are: "<<a<<" and "<<b<<endl;
+   }
+};
+int main(){
+ // implicit call
+  constuct c1,c2(10,11),c3(20,21,22);
+c1.display();
+  c2.display();
+
+//explicit call
+constuct c1 = constuct(10,11);
+c1.display();
+
+  return 0;
+}
